@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sam Lee的博客</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+    body{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .carousel{
+        height: 500px;
+        background-color: #000;
+        margin-bottom: 60px;
+    }
+    .carousel .item{
+        height: 500px;
+        background-color: #000;
+    }
+    .carousel img{
+        width: 100%;
+    }
+    .carousel-caption p{
+        margin-bottom: 20px;
+        font-size: 20px;
+        line-height: 1.8;
+    }
+    #summary-container .col-md-4{
+        text-align: center;
+    }
+    hr.divider{
+        margin: 40px 0;
+        border:1px solid #eee;
+    }
+    .feature{
+        padding:30px 0;
+    }
+    .feature-heading{
+        font-size: 50px;
+        color: #2a6496;
+        margin-top: 120px;
+    }
+    .feature-heading .text-muted{
+        font-size: 24px;
+        color: #bbb;
+    }
+    </style>
+</head>
+
+<body>
+<!-- 顶部导航 -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu-nav">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- logo -->
+            <a class="navbar-brand" href="#">Sam Lee的博客</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#ad-carousel">综述</a></li>
+                <li><a href="#summary-container">简述</a></li>
+                <li class="dropdown">
+                <!-- 下拉菜单 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">内容<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                    <!-- 导航 下拉菜单-->
+                        <li><a href="#feature-tab" data-tab="tab-html5">HTML5</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-css3">CSS3</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-javascript">JavaScript</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-jquery">jQuery</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" data-toggle="modal" data-target="#about-modal">关于</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- 导航结束 -->
+
+<!-- 广告轮播 -->
+<div id="ad-carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#ad-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#ad-carousel" data-slide-to="1"></li>
+        <li data-target="#ad-carousel" data-slide-to="2"></li>
+        <li data-target="#ad-carousel" data-slide-to="3"></li>
+<!--         <li data-target="#ad-carousel" data-slide-to="4"></li> -->
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="images/html5-bg.jpg" alt="1 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>HTML5</h1>
+                    <p>HTML5，强大的标签</p>
+                    <p>
+                        <a class="btn btn-lg btn-primary" href="http://www.google.cn/intl/zh-CN/chrome/browser/" role="button" target="_blank">和我交流</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/css3-bg.jpg" alt="2 slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>CSS3</h1>
+                    <p>CSS3，美丽的装饰</p>
+                    <p><a class="btn btn-lg btn-primary" href="http://www.firefox.com.cn/download/" target="_blank"
+                          role="button">和我交流</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/JavaScript-bg.jpg" alt="3 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>JavaScript</h1>
+                    <p>JavaScript，无与伦比的脚本语言</p>
+                    <p><a class="btn btn-lg btn-primary" href="http://www.apple.com/cn/safari/" target="_blank"
+                          role="button">和我交流</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/jQuery-bg.jpg" alt="4 slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>jQuery</h1>
+                    <p>jQuery，写更少，做更多</p>
+                    <p><a class="btn btn-lg btn-primary" href="http://www.opera.com/zh-cn" target="_blank"
+                          role="button">和我交流</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#ad-carousel" data-slide="prev"><span
+            class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#ad-carousel" data-slide="next"><span
+            class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+<!-- 轮播结束 -->
+<!-- 主要内容 -->
+<div class="container summary">
+
+    <!-- 简介 -->
+    <div class="row" id="summary-container">
+        <div class="col-md-4">
+            <img class="img-circle" src="images/html5-small.png" alt="chrome">
+            <h2>HTML5</h2>
+            <p>HTML5</p>
+           <p><a class="btn btn-default" href="#" role="button">和我交流</a></p>
+        </div>
+        <div class="col-md-4">
+            <img class="img-circle" src="images/css3-small.png" alt="firefox">
+            <h2>CSS3</h2>
+            <p>CSS3</p>
+            <p><a class="btn btn-default" href="#" role="button">和我交流</a></p>
+        </div>
+        <div class="col-md-4">
+            <img class="img-circle" src="images/javascript-small.png" alt="safari">
+            <h2>JavaScripti</h2>
+            <p>JavaScript</p>
+            <p><a class="btn btn-default" href="#" role="button">和我交流</a></p>
+        </div>
+        <!-- 简介结束 -->
+    </div>
+    <hr class="divider" />
+
+<!-- 标签 -->
+     <ul class="nav nav-tabs" role="tablist" id="feature-tab">
+        <li class="active"><a href="#tab-html5" role="tab" data-toggle="tab">HTML5</a></li>
+        <li><a href="#tab-css3" role="tab" data-toggle="tab">CSS3</a></li>
+        <li><a href="#tab-javascript" role="tab" data-toggle="tab">JavaScript</a></li>
+        <li><a href="#tab-jquery" role="tab" data-toggle="tab">Jquery</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="tab-html5">
+            <div class="row feature">
+                <div class="col-md-7">
+                    <h2 class="feature-heading">HTML/HTML5 <span class="text-muted">最强大的标签</span></h2>
+                    <p class="lead">HTML5赋予网页更好的意义和结构。更加丰富的标签将随着对RDFa的，微数据与微格式等方面的支持，构建对程序、对用户都更有价值的数据驱动的Web。</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/html5.png"
+                         alt="Chrome">
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-css3">
+            <div class="row feature">
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/css3.png"
+                         alt="Firefox">
+                </div>
+                <div class="col-md-7">
+                    <h2 class="feature-heading">CSS3<span class="text-muted">美丽的装饰</span></h2>
+                    <p class="lead">CSS3将完全向后兼容，所以没有必要修改的设计来让它们继续运作。网络浏览器也还将继续支持CSS2。CSS3主要的影响是将可以使用新的可用的选择器和属性，这些会允许实现新的设计效果（譬如动态和渐变），而且可以很简单的设计出现在的设计效果（比如说使用分栏）。</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-javascript">
+            <div class="row feature">
+                <div class="col-md-7">
+                    <img class="feature-image img-responsive" src="images/javascript.png" alt="Safari">
+                </div>
+                <div class="col-md-5">
+                    <h2 class="feature-heading">JavaScript<span class="text-muted">无与伦比的脚本语言</span></h2>
+                    <p class="lead">Javascript脚本语言同其他语言一样，有它自身的基本数据类型，表达式和算术运算符及程序的基本程序框架。</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-jquery">
+            <div class="row feature">
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/jquery.png" alt="Opera">
+                </div>
+                <div class="col-md-7">
+                    <h2 class="feature-heading">jQuery<span class="text-muted">小但易用</span>
+                    </h2>
+                    <p class="lead">jQuery是一个兼容多浏览器的javascript库，核心理念是write less,do more(写得更少,做得更多)。</p>
+                </div>
+            </div>
+        </div>
+      <!-- 内容简介结束 -->
+<hr class="divider">
+<footer>
+    <p class="pull-right"><a href="#">回到顶部</a></p>
+    <p >@2015 Sam Lee</p>
+</footer>
+</div>
+
+  <!-- 关于 -->
+    <div class="modal fade" id="about-modal" tabindex="-1" role="dialog" aria-labelledby="modal-label"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+                    <h4 class="modal-title" id="modal-label">关于</h4>
+                </div>
+                <div class="modal-body" style="text-align:center; font-family:微软雅黑">
+                    <p>李世民</p>
+                    <p>上海工程技术大学-本科-计算机系</p>
+                    <p>热爱WEB前端开发的我</p>
+                    <p><img src="images/erm_love.png"></p>
+                    <p>Tel: 18817834467</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">了解了</button>
+                </div>
+            </div>
+        </div>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
